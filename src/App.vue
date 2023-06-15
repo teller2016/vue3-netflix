@@ -9,5 +9,8 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+#app {
+  font-family: "Noto Sans", "Noto Sans KR", Avenir, Helvetica, Arial, sans-serif;
+}
 </style>
