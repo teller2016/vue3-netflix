@@ -1,5 +1,5 @@
 <template>
-  vue3-netflix
+  <router-view></router-view>
 </template>
 
 <script>
