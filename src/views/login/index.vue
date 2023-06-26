@@ -12,6 +12,10 @@
     type="button"
     @click="loginByEmail"
   >로그인</button>
+  <button
+    type="button"
+    @click="signInByEmail"
+  >회원가입</button>
 </template>
 
 <script>
@@ -27,11 +31,17 @@ export default {
       console.log(login);
       login.login();
     };
+    const signInByEmail = () => {
+      const login = new AuthAPI(id.value, password.value);
+      console.log(login);
+      login.signIn();
+    };
 
     return {
       id,
       password,
       loginByEmail,
+      signInByEmail,
     };
   },
 };
