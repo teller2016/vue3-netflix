@@ -33,16 +33,25 @@
     <div class="login__box">
       <h3 class="login__title">로그인</h3>
       <form class="login__form">
-        <label class="login__input">
-          <input type="text">
-        </label>
-        <label class="login__input">
-          <input type="text">
-        </label>
+        <div class="login__form__top">
+          <!--TODO: Input Component-->
+          <label class="sb__input">
+            <span class="input__placeholder">이메일 주소 또는 전화번호</span>
+            <input type="text">
+          </label>
+
+          <label class="sb__input">
+            <span class="input__placeholder">비밀번호</span>
+            <input type="text">
+          </label>
+
+        </div>
 
         <div class="login__form__bottom">
+          <!--TODO: Button Component-->
           <button type="button">로그인</button>
           <div>
+            <!--TODO: Checkbox Component-->
             <label
               for=""
               class="sb__checkbox"
@@ -58,7 +67,7 @@
 
       <div class="login__bottom">
         <p class="login__guide">Netflix 회원이 아닌가요? <a>지금 가입하세요.</a></p>
-        <p class="login__guide--small">이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을 확인합니다. <a>자세히 알아보기</a></p>
+        <p class="login__guide--small">이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 <br>로봇이 아님을 확인합니다. <a>자세히 알아보기</a></p>
       </div>
     </div>
   </div>

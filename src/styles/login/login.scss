@@ -27,15 +27,15 @@
       content: "";
       position: absolute;
       inset: 0 0 0 0;
-      background: rgba(black, 0.6);
+      background: rgba($black, 0.6);
     }
   }
 
   &__login {
     .login {
       &__box {
-        width: 660px;
-        background: rgba(black, 0.8);
+        width: 480px;
+        background: rgba($black, 0.8);
         padding: 80px;
         margin: 0 auto;
         border-radius: 8px;
@@ -44,7 +44,86 @@
       &__title {
         margin-bottom: 30px;
         font-size: 40px;
-        color: white;
+        color: $white;
+      }
+
+      &__form {
+        &__top {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        &__bottom {
+          margin-top: 70px;
+        }
+      }
+
+      &__bottom {
+        margin-top: 100px;
+      }
+
+      &__guide {
+        font-size: 16px;
+        color: gray;
+
+        a {
+          color: $white;
+        }
+
+        &--small {
+          @extend .login__guide;
+          margin-top: 20px;
+          font-size: 13px;
+
+          a {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+
+  &__input {
+    $left: 24px;
+    $top: 16px;
+
+    position: relative;
+
+    display: block;
+    background: #333;
+    height: 50px;
+    line-height: 50px;
+    padding: $top $left 0;
+    border-radius: 4px;
+
+    .input {
+      &__placeholder {
+        position: absolute;
+        bottom: 0;
+        left: $left;
+        font-size: 16px;
+        color: #8c8c8c;
+        pointer-events: none;
+        transition: all 0.5s ease;
+      }
+    }
+
+    input {
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: none;
+      color: $white;
+      font-size: 16px;
+    }
+
+    &:focus-within {
+      .input {
+        &__placeholder {
+          bottom: 10px;
+          font-size: 14px;
+        }
       }
     }
   }
